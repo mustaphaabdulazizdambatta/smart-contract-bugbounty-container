@@ -31,14 +31,6 @@ RUN npm install -g hardhat
 
 
 # Install web application bug bounty tools
-# Subfinder for subdomain enumeration
-RUN GO_VERSION=$(curl -sL https://golang.org/VERSION?m=text) && \
-    curl -OL https://golang.org/dl/${GO_VERSION}.linux-amd64.tar.gz && \
-    tar -C /usr/local -xzf ${GO_VERSION}.linux-amd64.tar.gz && \
-    rm -f ${GO_VERSION}.linux-amd64.tar.gz && \
-    ln -s /usr/local/go/bin/go /usr/local/bin/go && \
-    go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
-
 # Install OWASP ZAP
 # Install Burp Suite Community Edition
 
